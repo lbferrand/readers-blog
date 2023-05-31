@@ -12,10 +12,12 @@ function App() {
         <div className="App">
           <h1>My Awesome Blog</h1>
           <div id='page-body'>
-            <HomePage />
-            <AboutPage />
-            <ArticlesListPage />
-            <ArticlePage />
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/articles' element={<ArticlesListPage />} />
+              <Route path='/articles/:articleId' element={<ArticlePage />} />
+            </Routes> 
           </div>
         </div>
       </div>
