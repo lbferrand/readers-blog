@@ -1,3 +1,7 @@
+.container {
+  margin: 2rem;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
