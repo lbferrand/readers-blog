@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './Pages/NavBar';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import ArticlePage from './Pages/ArticlePage';
@@ -10,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className='container'>
         <div className="App">
-          <h1>My Awesome Blog</h1>
+          <NavBar />
           <div id='page-body'>
             <Routes>
               <Route path='/' element={<HomePage />} />
