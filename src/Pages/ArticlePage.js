@@ -29,7 +29,7 @@ const ArticlePage = () => {
       setArticleInfo(newArticleInfo);
     };
 
-    if (isLoading) {
+    if (!isLoading) {
       loadArticleInfo();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
