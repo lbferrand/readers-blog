@@ -1,7 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import useUser from "../hooks/useUser";
 
 const NavBar = () => {
+  const { user } = useUser();
   return (
     <nav>
       <ul>
@@ -15,8 +17,11 @@ const NavBar = () => {
           <Link to="/articles">Articles</Link>
         </li>
       </ul>
+      <div className="nav-right">
+        {user ? <button>Log Out</button> : <button>Log In</button>}
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
